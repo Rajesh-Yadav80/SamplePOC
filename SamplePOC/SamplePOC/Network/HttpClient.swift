@@ -41,6 +41,15 @@ class HttpClient {
         
     }
     
+    /**
+    *  Get method for Web api request
+    *
+    *  @param: @url, @callback.
+    *
+    *  @return empty.
+    *
+    *  @Developed By: Rajesh Yadav
+    */
     func get( url: URL, callback: @escaping completeClosure ) {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -54,6 +63,16 @@ class HttpClient {
 
 //MARK: Conform the protocol
 extension URLSession: URLSessionProtocol {
+    
+    /**
+    *  DataTask method for returning URLSessionDataTask protocol object
+    *
+    *  @param: @request, @callback.
+    *
+    *  @return URLSessionDataTaskProtocol.
+    *
+    *  @Developed By: Rajesh Yadav
+    */
     func dataTask(with request: URLRequest, completionHandler: @escaping URLSessionProtocol.DataTaskResult) -> URLSessionDataTaskProtocol {
         return dataTask(with: request, completionHandler: completionHandler) as URLSessionDataTask
     }
