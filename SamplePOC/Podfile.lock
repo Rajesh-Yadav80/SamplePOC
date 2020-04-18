@@ -1,3 +1,38 @@
-PODFILE CHECKSUM: 6e5af9834c2631767009c412d5addbbb891df227
+PODS:
+  - Masonry (1.1.0)
+  - ObjectMapper (3.5.1)
+  - ReachabilitySwift (5.0.0)
+  - SDWebImage (5.5.2):
+    - SDWebImage/Core (= 5.5.2)
+  - SDWebImage/Core (5.5.2)
+  - SwiftLint (0.39.2)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - Masonry
+  - ObjectMapper
+  - ReachabilitySwift
+  - SDWebImage
+  - SwiftLint (~> 0.27)
+  - Toast-Swift
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+    - ObjectMapper
+    - ReachabilitySwift
+    - SDWebImage
+    - SwiftLint
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
+  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: 42f5f36b5dd860d56ea174e91532c413722e9b10
 
 COCOAPODS: 1.8.4

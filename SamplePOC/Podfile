@@ -4,7 +4,12 @@
 target 'SamplePOC' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+  pod 'ObjectMapper' , :inhibit_warnings => true
+  pod 'ReachabilitySwift' , :inhibit_warnings => true
+  pod 'SDWebImage' , :inhibit_warnings => true
+  pod 'SwiftLint', '~> 0.27'
+  pod 'Toast-Swift' , :inhibit_warnings => true
+  pod 'Masonry' , :inhibit_warnings => true
   # Pods for SamplePOC
 
   target 'SamplePOCTests' do
@@ -13,7 +18,9 @@ target 'SamplePOC' do
   end
 
   target 'SamplePOCUITests' do
+    inherit! :search_paths
     # Pods for testing
+    
   end
 
 end
