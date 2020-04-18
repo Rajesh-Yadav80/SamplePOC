@@ -91,7 +91,7 @@ extension AppManager{
                isNetworkConnected = false
                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2.0) {
 //                   self.showNetworkNotAvailableAlertController()
-                self.showAlertNativeDialog(title: "Sample POC", message: "Network became unreachable", completion: {
+                self.showAlertNativeDialog("Sample POC", message: "Network became unreachable", completion: {
                     message in
                 })
                }
@@ -158,7 +158,7 @@ extension AppManager {
      *
      *  @Developed By: Rajesh Yadav
      */
-    func showAlertNativeDialog(title:String, message:String,completion:@escaping ((String)->Void)) {
+    func showAlertNativeDialog(_ title:String, message:String,completion:@escaping ((String)->Void)) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
