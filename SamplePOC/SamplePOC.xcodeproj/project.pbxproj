@@ -18,6 +18,13 @@
 		49988E6F244AC142002B20FF /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988E6E244AC142002B20FF /* NetworkTests.swift */; };
 		49988E70244AC269002B20FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988E66244ABA6E002B20FF /* AppDelegate.swift */; };
 		49988E71244AC26A002B20FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988E66244ABA6E002B20FF /* AppDelegate.swift */; };
+		49988E74244AC61D002B20FF /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988E73244AC61D002B20FF /* HttpClient.swift */; };
+		49988E76244AC794002B20FF /* HttpURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988E75244AC794002B20FF /* HttpURLSession.swift */; };
+		49988E78244AC86C002B20FF /* HttpClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988E77244AC86C002B20FF /* HttpClientTests.swift */; };
+		49988E79244AC872002B20FF /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988E73244AC61D002B20FF /* HttpClient.swift */; };
+		49988E7A244AC872002B20FF /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988E73244AC61D002B20FF /* HttpClient.swift */; };
+		49988E7B244AC876002B20FF /* HttpURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988E75244AC794002B20FF /* HttpURLSession.swift */; };
+		49988E7C244AC877002B20FF /* HttpURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988E75244AC794002B20FF /* HttpURLSession.swift */; };
 		B303E591A9A786014F266319 /* Pods_SamplePOCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A19E9F32E0D0822C4FDADE8 /* Pods_SamplePOCTests.framework */; };
 		CC5265498494F82896BC1EF0 /* Pods_SamplePOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795F90E2D40AC7B92D8A0D33 /* Pods_SamplePOC.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +62,9 @@
 		49988E66244ABA6E002B20FF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49988E69244ABCA1002B20FF /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		49988E6E244AC142002B20FF /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		49988E73244AC61D002B20FF /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		49988E75244AC794002B20FF /* HttpURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpURLSession.swift; sourceTree = "<group>"; };
+		49988E77244AC86C002B20FF /* HttpClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientTests.swift; sourceTree = "<group>"; };
 		4A19E9F32E0D0822C4FDADE8 /* Pods_SamplePOCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SamplePOCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F3436478B4581C92C81C55 /* Pods-SamplePOC-SamplePOCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamplePOC-SamplePOCUITests.debug.xcconfig"; path = "Target Support Files/Pods-SamplePOC-SamplePOCUITests/Pods-SamplePOC-SamplePOCUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6BA31EBFA28D06D2353EE6DE /* Pods_SamplePOCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SamplePOCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +129,7 @@
 		49988E33244AAC7D002B20FF /* SamplePOC */ = {
 			isa = PBXGroup;
 			children = (
+				49988E72244AC605002B20FF /* Network */,
 				49988E68244ABC91002B20FF /* Manager */,
 				49988E65244ABA6E002B20FF /* AppDelegate */,
 				49988E64244ABA4F002B20FF /* SamplePOC-Bridging-Header.h */,
@@ -134,6 +145,7 @@
 				49988E4B244AAC81002B20FF /* SamplePOCTests.swift */,
 				49988E4D244AAC81002B20FF /* Info.plist */,
 				49988E6E244AC142002B20FF /* NetworkTests.swift */,
+				49988E77244AC86C002B20FF /* HttpClientTests.swift */,
 			);
 			path = SamplePOCTests;
 			sourceTree = "<group>";
@@ -161,6 +173,15 @@
 				49988E69244ABCA1002B20FF /* AppManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		49988E72244AC605002B20FF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				49988E73244AC61D002B20FF /* HttpClient.swift */,
+				49988E75244AC794002B20FF /* HttpURLSession.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		A50E22AE73ED961597860036 /* Frameworks */ = {
@@ -408,6 +429,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				49988E67244ABA6E002B20FF /* AppDelegate.swift in Sources */,
+				49988E74244AC61D002B20FF /* HttpClient.swift in Sources */,
+				49988E76244AC794002B20FF /* HttpURLSession.swift in Sources */,
 				49988E6A244ABCA1002B20FF /* AppManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,7 +441,10 @@
 			files = (
 				49988E70244AC269002B20FF /* AppDelegate.swift in Sources */,
 				49988E6F244AC142002B20FF /* NetworkTests.swift in Sources */,
+				49988E78244AC86C002B20FF /* HttpClientTests.swift in Sources */,
 				49988E4C244AAC81002B20FF /* SamplePOCTests.swift in Sources */,
+				49988E79244AC872002B20FF /* HttpClient.swift in Sources */,
+				49988E7B244AC876002B20FF /* HttpURLSession.swift in Sources */,
 				49988E6B244ABCA9002B20FF /* AppManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +455,8 @@
 			files = (
 				49988E71244AC26A002B20FF /* AppDelegate.swift in Sources */,
 				49988E57244AAC81002B20FF /* SamplePOCUITests.swift in Sources */,
+				49988E7A244AC872002B20FF /* HttpClient.swift in Sources */,
+				49988E7C244AC877002B20FF /* HttpURLSession.swift in Sources */,
 				49988E6C244ABCAA002B20FF /* AppManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
