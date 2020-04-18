@@ -1,8 +1,9 @@
 //
 //  APIManager.swift
-//  SandeepIndoreDemo
+//  SamplePOC
 //
-//  Created by consagous on 14/12/19.
+//  Created by Rajesh Yadav on 18/04/20.
+//  Copyright © 2020 Rajesh Yadav. All rights reserved.
 //
 
 import Foundation
@@ -11,7 +12,7 @@ import Foundation
 /**
  *  APIManager Class Used To Connect With Backend Services.
  *
- *  @Developed By: Sandeep Mahajan
+ *  @Developed By: Rajesh Yadav
  */
 class APIManager {
     

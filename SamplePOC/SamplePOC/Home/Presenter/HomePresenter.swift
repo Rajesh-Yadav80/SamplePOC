@@ -20,14 +20,25 @@ class HomePresenter {
 
 extension HomePresenter {
     
-    func getListingData(){
+    func getListingData(callBack:@escaping(_ status: Bool) -> Void){
         
         //  status: Bool, _ response: ResponseHomeListing?, _ message: String?
         
         HomeService.getListingData(callBack: {
             (status, response, message) in
-            print(response)
+            if (status == true) {
+                OperationQueue.main.addOperation {
+                    
+                    if(response != nil ){
+                        self.view.resHomeListing = response
+                    }
+                    callBack(status)
+                }
+            } else {
+                OperationQueue.main.addOperation {
+                    callBack(status)
+                }
+            }
         })
     }
-    
 }

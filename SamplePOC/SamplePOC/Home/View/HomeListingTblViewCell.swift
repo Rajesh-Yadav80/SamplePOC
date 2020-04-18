@@ -47,6 +47,29 @@ class HomeListingTblViewCell: UITableViewCell {
         return label
     }()
     
+    /**
+     *  HomeListingTbViewCell Data Populating
+     *
+     *  @Developed By: Rajesh Yadav
+     */
+    var rowsData : ResponseHomeListing.Rows? {
+        didSet {
+            self.lblTitle.text = ""
+            if let title = rowsData?.title, title.trimmedString() != "" {
+                self.lblTitle.text = title
+            }
+            self.lblDesc.text = ""
+            if let desc = rowsData?.description, desc.trimmedString() != "" {
+                self.lblDesc.text = desc
+            }
+            if let url = rowsData?.imageHref?.toUrl() {
+                self.imgPicture.sd_setImage(with: url ,placeholderImage: #imageLiteral(resourceName: "ic_profile_dummy_x70"),completed: nil)
+            }else {
+                self.imgPicture.image = #imageLiteral(resourceName: "ic_profile_dummy_x70")
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

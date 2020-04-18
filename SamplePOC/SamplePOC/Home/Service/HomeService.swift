@@ -51,7 +51,7 @@ class HomeService {
     /**
      *  HomeController ViewModel API
      *
-     *  @Developed By: Sandeep Mahajan
+     *  @Developed By: Rajesh Yadav
      */
     static func getListingData(callBack:@escaping(_ status: Bool, _ response: ResponseHomeListing?, _ message: String?) -> Void){
         

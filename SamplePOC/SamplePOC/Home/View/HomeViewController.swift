@@ -15,6 +15,9 @@ class HomeViewController: BaseController {
     
     var presenter = HomePresenter()
     
+    // api response holder
+    var resHomeListing : ResponseHomeListing?
+    
     //MARK:- Making Refersh control
     lazy var refreshControl: UIRefreshControl = {
         let rfControl = UIRefreshControl()
@@ -98,11 +101,13 @@ extension HomeViewController : UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return (self.resHomeListing != nil && self.resHomeListing?.rows != nil && (self.resHomeListing?.rows?.count)! > 0) ? (self.resHomeListing?.rows?.count)! : 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = HomeListingTblViewCell()
+        var cell = HomeListingTblViewCell()
         
+        let row = self.resHomeListing?.rows![indexPath.row]
+        cell.rowsData = row
         return cell
     }
 }
@@ -121,7 +126,7 @@ extension HomeViewController : UITableViewDelegate {
 /**
  *  API Calling.
  *
- *  @Developed By: Sandeep Mahajan
+ *  @Developed By: Rajesh Yadav
  */
 extension HomeViewController  {
     
@@ -135,6 +140,17 @@ extension HomeViewController  {
      * @Developed By: Rajesh Yadav
      */
     func getListing(){
-        self.presenter.getListingData()
+        self.presenter.getListingData(callBack: {
+            status in
+            if(status){
+                if(self.resHomeListing != nil){
+                    self.title = self.resHomeListing?.title ?? ""
+                    
+                    if(self.resHomeListing?.rows != nil && (self.resHomeListing?.rows?.count)! > 0){
+                        self.tblViewHomeListing.reloadData()
+                    }
+                }
+            }
+        })
     }
 }
