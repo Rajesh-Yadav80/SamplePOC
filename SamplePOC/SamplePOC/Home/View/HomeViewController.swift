@@ -13,6 +13,8 @@ class HomeViewController: BaseController {
     
     var tblViewHomeListing = UITableView()
     
+    var presenter = HomePresenter()
+    
     //MARK:- Making Refersh control
     lazy var refreshControl: UIRefreshControl = {
         let rfControl = UIRefreshControl()
@@ -52,10 +54,14 @@ class HomeViewController: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.presenter.attachView(view: self)
+        
         // Do any additional setup after loading the view.
         self.title = NavigationConstant.titleHome
         self.title = "Test Navigation"
-//        self.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+
+        self.getListing()
     }
 }
 
@@ -112,3 +118,23 @@ extension HomeViewController : UITableViewDelegate {
     }
 }
 
+/**
+ *  API Calling.
+ *
+ *  @Developed By: Sandeep Mahajan
+ */
+extension HomeViewController  {
+    
+    /**
+     * Get home lsiting from API Response
+     *
+     * Param : nothing
+     *
+     * Return : nothing
+     *
+     * @Developed By: Rajesh Yadav
+     */
+    func getListing(){
+        self.presenter.getListingData()
+    }
+}

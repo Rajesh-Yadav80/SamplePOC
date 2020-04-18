@@ -3,4 +3,70 @@
    uuid = "E23C6692-CA05-429E-9CE9-FB3FCB8AA223"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7544E40B-1AAD-4F24-8280-C28C399D52A7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SamplePOC/Home/Service/HomeService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "getListingData(callBack:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB6E7FA6-2C80-428B-90B9-680F103E371B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SamplePOC/Home/Service/HomeService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "getListingData(callBack:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CB6E7FA6-2C80-428B-90B9-680F103E371B - 35019cf6e67034cf"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static SamplePOC.HomeService.getListingData(callBack: (Swift.Bool, Swift.Optional&lt;SamplePOC.ResponseHomeListing&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SamplePOC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rajeshyadav/Desktop/TestPoc/SamplePOC/SamplePOC/SamplePOC/Home/Service/HomeService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "318">
+               </Location>
+               <Location
+                  uuid = "CB6E7FA6-2C80-428B-90B9-680F103E371B - 8ee1758e573a0a4f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;__C.NSDictionary&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in static SamplePOC.HomeService.getListingData(callBack: (Swift.Bool, Swift.Optional&lt;SamplePOC.ResponseHomeListing&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SamplePOC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rajeshyadav/Desktop/TestPoc/SamplePOC/SamplePOC/SamplePOC/Home/Service/HomeService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "221">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

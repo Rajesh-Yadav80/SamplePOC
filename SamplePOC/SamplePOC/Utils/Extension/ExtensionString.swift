@@ -25,7 +25,9 @@ extension String {
      *  @Developed By: Rajesh Yadav
      */
     func toUrl()->URL? {
-        return URL(string:self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "")
+//        return URL(string:self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "")
+        let url = URL(string: self.replacingOccurrences(of: " ", with: "%20"))
+        return url
     }
     
     /**
