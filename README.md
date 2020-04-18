@@ -1,2 +1,8 @@
 # SamplePOC
-POC for MVP arch. with programmatically UI design and API calling including unit test case and UI test cases
+POC for MVP arch. 
+• UIView design programmatically
+• Network checking
+• API calling
+• Lazy loading on images
+• Unit test case 
+• UI test cases
