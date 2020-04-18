@@ -36,7 +36,7 @@ extension UIViewController {
      *
      *  @Developed By: Rajesh Yadav
      */
-    func makeAndroidToast(title: String?){
+    func makeAndroidToast(_ title: String?){
         var style = ToastStyle()
         style.messageColor = .white
         style.backgroundColor = .darkGray
