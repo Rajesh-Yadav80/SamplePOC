@@ -11,6 +11,15 @@ import Foundation
 class HomePresenter {
     var view:HomeViewController!
     
+    // TableView numberOfSection
+    var numberOfSection = 1
+    
+    // TableView numberOfRows
+    var numberOfRows = 0
+    
+    // api response holder
+    var resHomeListing : ResponseHomeListing?
+    
     func attachView(view: HomeViewController) {
         self.view = view
         
@@ -30,7 +39,11 @@ extension HomePresenter {
                 OperationQueue.main.addOperation {
                     
                     if(response != nil ){
-                        self.view.resHomeListing = response
+                        self.resHomeListing = response
+                        
+                        if(response?.rows != nil && (response?.rows?.count)! > 0){
+                            self.numberOfRows = response?.rows?.count ?? 0
+                        }
                     }
                     callBack(status)
                 }

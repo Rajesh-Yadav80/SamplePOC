@@ -15,9 +15,6 @@ class HomeViewController: BaseController {
     
     var presenter = HomePresenter()
     
-    // api response holder
-    var resHomeListing : ResponseHomeListing?
-    
     //MARK:- Making Refersh control
     lazy var refreshControl: UIRefreshControl = {
         let rfControl = UIRefreshControl()
@@ -26,7 +23,6 @@ class HomeViewController: BaseController {
         tblViewHomeListing.addSubview(rfControl)
         return rfControl
     }()
-    
     
     /**
      *  UIView Life Cycle
@@ -63,7 +59,8 @@ class HomeViewController: BaseController {
         // Do any additional setup after loading the view.
         self.title = NavigationConstant.titleHome
         self.title = "Test Navigation"
-
+        
+        self.configTableViewCell()
         self.getListing()
     }
 }
@@ -82,7 +79,7 @@ extension HomeViewController{
      */
     @objc func refresh(sender:AnyObject) {
         // Code to refresh table view
-        
+        self.getListing()
     }
 }
 
@@ -98,16 +95,23 @@ extension HomeViewController{
 //MARK:-
 extension HomeViewController : UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return presenter.numberOfSection
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (self.resHomeListing != nil && self.resHomeListing?.rows != nil && (self.resHomeListing?.rows?.count)! > 0) ? (self.resHomeListing?.rows?.count)! : 0
+        return presenter.numberOfRows
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = HomeListingTblViewCell()
+//        var cell = HomeListingTblViewCell()
+//
+//        let row = self.presenter.resHomeListing?.rows![indexPath.row]
+//        cell.rowsData = row
         
-        let row = self.resHomeListing?.rows![indexPath.row]
-        cell.rowsData = row
+        var cell = UITableViewCell()
+        if let homeCell = tableView.dequeueReusableCell(withIdentifier: HomeListingTblViewCell.nameOfClass) as? HomeListingTblViewCell {
+            let row = self.presenter.resHomeListing?.rows![indexPath.row]
+            homeCell.rowsData = row
+            cell = homeCell
+        }
         return cell
     }
 }
@@ -143,13 +147,17 @@ extension HomeViewController  {
         self.presenter.getListingData(callBack: {
             status in
             if(status){
-                if(self.resHomeListing != nil){
-                    self.title = self.resHomeListing?.title ?? ""
+                if(self.presenter.resHomeListing != nil){
+                    self.title = self.presenter.resHomeListing?.title ?? ""
                     
-                    if(self.resHomeListing?.rows != nil && (self.resHomeListing?.rows?.count)! > 0){
+                    if(self.presenter.resHomeListing?.rows != nil && (self.presenter.resHomeListing?.rows?.count)! > 0){
                         self.tblViewHomeListing.reloadData()
                     }
                 }
+                
+                self.refreshControl.endRefreshing()
+            } else {
+                self.refreshControl.endRefreshing()
             }
         })
     }
