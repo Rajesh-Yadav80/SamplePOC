@@ -33,6 +33,7 @@
 		49988E8F244AD7E4002B20FF /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988E8E244AD7E4002B20FF /* HomeModel.swift */; };
 		49988E91244AD7F1002B20FF /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988E90244AD7F1002B20FF /* HomePresenter.swift */; };
 		49988E94244AD82B002B20FF /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988E93244AD82B002B20FF /* BaseController.swift */; };
+		49988E9A244AE95B002B20FF /* HomeListingTblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988E99244AE95B002B20FF /* HomeListingTblViewCell.swift */; };
 		B303E591A9A786014F266319 /* Pods_SamplePOCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A19E9F32E0D0822C4FDADE8 /* Pods_SamplePOCTests.framework */; };
 		CC5265498494F82896BC1EF0 /* Pods_SamplePOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795F90E2D40AC7B92D8A0D33 /* Pods_SamplePOC.framework */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,7 @@
 		49988E8E244AD7E4002B20FF /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		49988E90244AD7F1002B20FF /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		49988E93244AD82B002B20FF /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		49988E99244AE95B002B20FF /* HomeListingTblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListingTblViewCell.swift; sourceTree = "<group>"; };
 		4A19E9F32E0D0822C4FDADE8 /* Pods_SamplePOCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SamplePOCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F3436478B4581C92C81C55 /* Pods-SamplePOC-SamplePOCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamplePOC-SamplePOCUITests.debug.xcconfig"; path = "Target Support Files/Pods-SamplePOC-SamplePOCUITests/Pods-SamplePOC-SamplePOCUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6BA31EBFA28D06D2353EE6DE /* Pods_SamplePOCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SamplePOCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				49988E8C244AD7D6002B20FF /* HomeViewController.swift */,
+				49988E99244AE95B002B20FF /* HomeListingTblViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				49988E67244ABA6E002B20FF /* AppDelegate.swift in Sources */,
 				49988E81244AD03D002B20FF /* AppConstant.swift in Sources */,
 				49988E83244AD0F1002B20FF /* ExtensionString.swift in Sources */,
+				49988E9A244AE95B002B20FF /* HomeListingTblViewCell.swift in Sources */,
 				49988E74244AC61D002B20FF /* HttpClient.swift in Sources */,
 				49988E87244AD27D002B20FF /* ExtensionUIViewController.swift in Sources */,
 				49988E8D244AD7D6002B20FF /* HomeViewController.swift in Sources */,
@@ -702,6 +706,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cngs.SamplePOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SamplePOC/SamplePOC-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -722,6 +727,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cngs.SamplePOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SamplePOC/SamplePOC-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
